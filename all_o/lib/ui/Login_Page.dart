@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:all_o/Register_Page.dart';
+import 'package:go_router/go_router.dart';
 
 final supabase = Supabase.instance.client;
 
@@ -24,6 +24,7 @@ class _LoginPageState extends State<LoginPage> {
       );
       sm.showSnackBar(SnackBar(
       content: Text("User logged in: ${authResponse.user?.email}")));
+      GoRouter.of(context).go("/home");
     }
     catch(e){
       sm.showSnackBar(SnackBar(
@@ -32,10 +33,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Future<void> _register() async {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => RegisterPage()),
-    );
+    GoRouter.of(context).go("/home/Register");
   }
 
   Future<void> _resetPassword() async {

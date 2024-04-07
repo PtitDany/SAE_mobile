@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:all_o/Login_Page.dart';
+import 'package:go_router/go_router.dart';
 
 final supabase = Supabase.instance.client;
 
@@ -152,10 +152,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     duration: Duration(milliseconds: 1900),
                     child: MaterialButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LoginPage()),
-                        );
+                        GoRouter.of(context).go("/home/Login");
                       },
                       color: Color.fromRGBO(49, 39, 79, 1),
                       shape: RoundedRectangleBorder(

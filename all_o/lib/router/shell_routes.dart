@@ -27,6 +27,10 @@ class ScaffoldWithNavBar extends StatelessWidget {
             icon: Icon(Icons.announcement),
             label: "Annonces",
           ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          )
         ],
         currentIndex: _calculatorSelectedIndex(context),
         onTap: (int index) => _onItemTapped(index, context),
@@ -49,6 +53,9 @@ class ScaffoldWithNavBar extends StatelessWidget {
     if (location.startsWith("/home/Annonces")){
       return 2;
     }
+    if (location.startsWith("/home/Profile")){
+      return 3;
+    }
     return 0;
   }
 
@@ -62,6 +69,10 @@ class ScaffoldWithNavBar extends StatelessWidget {
         break;
       case 2:
         GoRouter.of(context).go("/home/Annonces");
+        break;
+      case 3:
+        GoRouter.of(context).go("/home/Profile");
+        break;
     }
   }
 }

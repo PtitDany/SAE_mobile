@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -40,7 +41,7 @@ class Home extends StatelessWidget {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Action à exécuter lorsque le bouton est pressé
+                GoRouter.of(context).go('/home/Login');
               },
               child: Text(
                 'Commencer',

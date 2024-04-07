@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../userHelper.dart'; // Assurez-vous d'importer votre fichier userHelper.dart avec la définition de loggedInUser
+import '../userHelper.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);

@@ -8,7 +8,7 @@ class Produits extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Testttttttttt',
+          'Produits',
           style: TextStyle(
             fontSize: 24.0,
             fontWeight: FontWeight.bold,

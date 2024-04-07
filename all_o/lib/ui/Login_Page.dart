@@ -4,6 +4,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../userHelper.dart';
 
+
 final supabase = Supabase.instance.client;
 
 class LoginPage extends StatefulWidget {
@@ -18,6 +19,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> _login() async {
     final sm = ScaffoldMessenger.of(context);
+    final categories = await supabase.from("Categorie").select();
+    print(categories);
     try{
       final authResponse = await supabase.auth.signInWithPassword(
       email: _usernameController.text,

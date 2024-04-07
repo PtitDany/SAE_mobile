@@ -1,5 +1,9 @@
 # README - Application ALL'O
 
+## Groupe
+- Malleron Daniel
+- Pigoreau Nathan
+
 ## Description
 ALL'O est une application mobile conçue pour faciliter le prêt et l'emprunt de divers articles entre étudiants ou apprentis au sein d'une communauté proche. L'application permet aux utilisateurs de publier des demandes d'articles dont ils ont besoin ou d'offrir des articles qu'ils peuvent prêter. Elle favorise la collaboration et le partage des ressources au sein de la communauté, facilitant ainsi l'accès à l'équipement, la recherche d'assistance ou la fourniture d'aide aux autres.
 

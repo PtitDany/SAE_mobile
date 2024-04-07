@@ -62,6 +62,16 @@ La documentation suivante est disponible :
 - **Base de données Locale**: Utilisation de sqflite pour stocker les annonces localement.
 - **Utilisation de go router**: Utilisation de go router pour la navigation.
 
+## MCD
+![MCD](./images_video/MCD_Mobile.drawio.png)
+
+## Diagramme de classe
+![Diagramme de classe](./images_video/Diagramme_Class_Mobile.drawio.png)
+
+## Vidéos présentant le travail réalisé
+[![Présentation](https://img.youtube.com/vi/QnrBYvnc5dM/0.jpg)](https://youtube.com/shorts/QnrBYvnc5dM?feature=share)
+
+
 ## Contrainte de temps
 Nous avons trouver que les 6h initialement prévu pour réaliser ce projet était clairement insuffisante, meme si nous pouvions travailer les week-end, la charge de travail deja présente pour les cours et les autres projets nous ont empêcher de travailler  autant que nous l'aurions souhaité. Nous rendons donc un projet qui n'est pas complet mais les compétences acquises durant ce projet, tels que, l'utilisation de supabase, sqflite, go_router, nous seront très utiles pour nos futurs projets.
 

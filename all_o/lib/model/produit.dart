@@ -4,7 +4,7 @@ class Produit {
   String description;
   int idCat;
   int idU;
-  int prix;
+  String etat;
 
   Produit({
     required this.idP,
@@ -12,7 +12,7 @@ class Produit {
     required this.description,
     required this.idCat,
     required this.idU,
-    required this.prix,
+    required this.etat,
   });
 
   factory Produit.fromSqFliteDataBase(Map<String, dynamic> map) => Produit(
@@ -21,6 +21,15 @@ class Produit {
     description: map['description'] ?? "un produit",
     idCat: map['idCat'].toInt ?? 0,
     idU: map['idU'].toInt ?? 0,
-    prix: map['prix'].toInt ?? 0,
+    etat: map['etat'] ?? "disponible",
   );
+
+  void changerEtat(String nouvelEtat) {
+    if (nouvelEtat == "disponible" || nouvelEtat == "réservé") {
+      etat = nouvelEtat;
+    } else {
+      throw Exception("État invalide : $nouvelEtat");
+    }
+  }
 }
+

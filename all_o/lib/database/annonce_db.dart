@@ -11,7 +11,7 @@ class Annonce_DB {
     final database = await DatabaseService.getDatabase(); // Utilisation de getDatabase() plutôt que database
     return await database!.rawInsert(
       '''INSERT INTO $tableName (idA, date_debut, date_fin, etat, idU, idP) VALUES (?,?,?,?,?,?)''',
-      [idA, date_debut, date_fin, etat, idU, idP],
+      [idA, date_debut.toIso8601String(), date_fin.toIso8601String(), etat, idU, idP],
     );
   }
 

@@ -5,11 +5,11 @@ class Produit_DB {
   final String tableName = 'produit';
 
 
-  Future<int> insert({required int idP, required String nomP, required String description, required int idCat, required int idU, required int prix}) async {
+  Future<int> insert({required int idP, required String nomP, required String description, required int idCat, required int idU, required String etat}) async {
     final database = await DatabaseService.getDatabase(); // Utilisation de getDatabase() plutôt que database
     return await database!.rawInsert(
-      '''INSERT INTO $tableName (idP, nomP, description, idCat, idU, prix) VALUES (?,?,?,?,?,?)''',
-      [idP, nomP, description, idCat, idU, prix],
+      '''INSERT INTO $tableName (idP, nomP, description, idCat, idU, etat) VALUES (?,?,?,?,?,?)''',
+      [idP, nomP, description, idCat, idU, etat],
     );
   }
 

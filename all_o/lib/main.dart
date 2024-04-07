@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:all_o/Home_Page.dart';
+import 'package:sqflite/sqflite.dart';
+import './app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -8,11 +10,7 @@ Future<void> main() async {
     url: 'https://qwqclixmupirmuttmday.supabase.co',
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3cWNsaXhtdXBpcm11dHRtZGF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAxNzAxOTMsImV4cCI6MjAyNTc0NjE5M30.OTBsDjeE-DNpN-tMgfgRFunHg1bhfm9C8krId-wxNjA',
   );
-  final client = SupabaseClient(
-    'https://qwqclixmupirmuttmday.supabase.co',
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF3cWNsaXhtdXBpcm11dHRtZGF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTAxNzAxOTMsImV4cCI6MjAyNTc0NjE5M30.OTBsDjeE-DNpN-tMgfgRFunHg1bhfm9C8krId-wxNjA',
-  );
-  runApp(MyApp(client: client));  
+  runApp(MyApp());  
 }
 
 class MyApp extends StatelessWidget {
@@ -30,4 +28,7 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
     );
   }
+}
+=======
+  runApp(const MyApp());
 }

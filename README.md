@@ -75,5 +75,15 @@ La documentation suivante est disponible :
 ## Contrainte de temps
 Nous avons trouver que les 6h initialement prévu pour réaliser ce projet était clairement insuffisante, meme si nous pouvions travailer les week-end, la charge de travail deja présente pour les cours et les autres projets nous ont empêcher de travailler  autant que nous l'aurions souhaité. Nous rendons donc un projet qui n'est pas complet mais les compétences acquises durant ce projet, tels que, l'utilisation de supabase, sqflite, go_router, nous seront très utiles pour nos futurs projets.
 
+## Installation
+Pour installer l'application, suivez ces étapes :
+```bash
+# Clonez le dépôt
+$ git clone https://github.com/PtitDany/SAE_mobile.git
+$ cd SAE_mobile/all_o
+$ flutter pub get
+$ flutter run
+```
+
 ## Licence
 Ce projet est sous licence [MIT License](LICENSE).

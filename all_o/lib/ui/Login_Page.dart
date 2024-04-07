@@ -2,6 +2,8 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:go_router/go_router.dart';
+import '../userHelper.dart';
+
 
 final supabase = Supabase.instance.client;
 
@@ -17,6 +19,8 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> _login() async {
     final sm = ScaffoldMessenger.of(context);
+    final categories = await supabase.from("Categorie").select();
+    print(categories);
     try{
       final authResponse = await supabase.auth.signInWithPassword(
       email: _usernameController.text,
@@ -24,6 +28,7 @@ class _LoginPageState extends State<LoginPage> {
       );
       sm.showSnackBar(SnackBar(
       content: Text("User logged in: ${authResponse.user?.email}")));
+      loggedInUser = authResponse.user;
       GoRouter.of(context).go("/home");
     }
     catch(e){

@@ -1,5 +1,7 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import './categorie_db.dart';
 
 class DatabaseService {
   static Database? _database;
@@ -48,6 +50,7 @@ class DatabaseService {
         );
       ''');
 
+      await Categorie_DB.syncCategoriesFromSupabase();
   return db;
   }
 }

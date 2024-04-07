@@ -14,6 +14,8 @@ class ScaffoldWithNavBar extends StatelessWidget {
       ),
       body: child,
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.purple[700],
+        unselectedItemColor: Colors.purple[700]!.withOpacity(0.5),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
@@ -35,9 +37,9 @@ class ScaffoldWithNavBar extends StatelessWidget {
         currentIndex: _calculatorSelectedIndex(context),
         onTap: (int index) => _onItemTapped(index, context),
       ),
-
     );
   }
+
 
   static int _calculatorSelectedIndex(BuildContext context) {
     final String location = GoRouterState

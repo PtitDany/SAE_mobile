@@ -22,7 +22,7 @@ class DatabaseService {
           date_fin TEXT NOT NULL,
           etat TEXT NOT NULL,
           idU INTEGER NOT NULL,
-          idP INTEGER NOT NULL,
+          idP INTEGER,
           FOREIGN KEY (idP) REFERENCES Produit(idP)
         );
       ''');

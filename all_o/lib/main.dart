@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:all_o/Home_Page.dart';
+import 'package:all_o/Login_Page.dart';
 import 'package:sqflite/sqflite.dart';
 import './app.dart';
 
@@ -14,9 +14,6 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final SupabaseClient client;
-  MyApp({required this.client});
-  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -25,10 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomePage(),
+      home: LoginPage(),
     );
   }
-}
-=======
-  runApp(const MyApp());
 }

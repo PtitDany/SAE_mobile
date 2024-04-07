@@ -47,7 +47,7 @@ class Home extends StatelessWidget {
                 style: TextStyle(color: Colors.white),
               ),
               style: ElevatedButton.styleFrom(
-                primary: Colors.purple[700], // Couleur de fond du bouton
+               backgroundColor: Colors.purple[700], // Couleur de fond du bouton
               ),
             ),
           ],
